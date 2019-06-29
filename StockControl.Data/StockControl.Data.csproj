@@ -65,6 +65,9 @@
     <Compile Include="Migrations\201906290643037_InitialCreate.Designer.cs">
       <DependentUpon>201906290643037_InitialCreate.cs</DependentUpon>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of e3d2f13... New Update
+=======
 >>>>>>> parent of e3d2f13... New Update
 =======
 >>>>>>> parent of e3d2f13... New Update
@@ -87,8 +90,13 @@
   <ItemGroup>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\201906290625343_InitialCreate.resx">
       <DependentUpon>201906290625343_InitialCreate.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\201906290643037_InitialCreate.resx">
+      <DependentUpon>201906290643037_InitialCreate.cs</DependentUpon>
+>>>>>>> parent of e3d2f13... New Update
 =======
     <EmbeddedResource Include="Migrations\201906290643037_InitialCreate.resx">
       <DependentUpon>201906290643037_InitialCreate.cs</DependentUpon>

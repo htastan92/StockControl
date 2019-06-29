@@ -12,8 +12,11 @@ namespace StockControl.Model
 	{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		[Required]
 		[StringLength(50)]
+=======
+>>>>>>> parent of e3d2f13... New Update
 =======
 >>>>>>> parent of e3d2f13... New Update
 =======
@@ -32,7 +35,11 @@ namespace StockControl.Model
 		public virtual ICollection<Sale> Sales { get; set; }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
+=======
+		public virtual ICollection<Stock> Stocks { get; set; }
+>>>>>>> parent of e3d2f13... New Update
 =======
 		public virtual ICollection<Stock> Stocks { get; set; }
 >>>>>>> parent of e3d2f13... New Update

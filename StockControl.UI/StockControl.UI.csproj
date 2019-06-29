@@ -39,6 +39,9 @@
       <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
     </Reference>
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of e3d2f13... New Update
+=======
 >>>>>>> parent of e3d2f13... New Update
 =======
 >>>>>>> parent of e3d2f13... New Update
@@ -65,7 +68,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of e3d2f13... New Update
 =======
 >>>>>>> parent of e3d2f13... New Update
     <EmbeddedResource Include="Form1.resx">

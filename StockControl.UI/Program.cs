@@ -32,6 +32,9 @@ namespace StockControl.UI
 			builder.RegisterType<ShipmentBuilder>().As<IShipmentService>();
 			builder.RegisterType<StockBuilder>().As<IStockService>();
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of e3d2f13... New Update
+=======
 >>>>>>> parent of e3d2f13... New Update
 =======
 >>>>>>> parent of e3d2f13... New Update
