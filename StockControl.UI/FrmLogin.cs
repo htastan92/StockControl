@@ -32,5 +32,10 @@ namespace StockControl.UI
 				MessageBox.Show("Invalid Identity Number Or Password");
 			}
 		}
+
+		private void FrmLogin_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
