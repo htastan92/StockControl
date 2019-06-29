@@ -9,23 +9,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace StockControl.Model
 {
 	public class Sale :BaseEntity
-	{
+	{	
 		public int PersonelId { get; set; }
-		[ForeignKey("PersonelId")]
 		public virtual Personel Personel { get; set; }
-		public int ProductId { get; set; }
-		[ForeignKey("ProductId")]
+		public int ProductId { get; set; }	
 		public virtual Product Product { get; set; }
-		public int StockId { get; set; }
-		[ForeignKey("StockId")]
+		public int StockId { get; set; }	
 		public virtual Stock Stock { get; set; }
 		public int CustomerId { get; set; }
-		[ForeignKey("CustomerId")]
 		public virtual Customer Customer { get; set; }
-		[Required]		
 		public decimal Amount { get; set; }
-		public int ShipmentId { get; set; }
-		[ForeignKey("ShipmentId")]
+		public int ShipmentId { get; set; }		
 		public virtual Shipment Shipment { get; set; }
 		public DateTime SellingDate { get; set; }
 	}

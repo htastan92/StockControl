@@ -10,27 +10,18 @@ namespace StockControl.Model
 {
 	public class Product : BaseEntity
 	{
-		public int CategoryId { get; set; }
-		[ForeignKey("CategoryId")]
+		
+		public int CategoryId { get; set; }		
 		public virtual Category Category { get; set; }
-		[Required]
-		[StringLength(50)]
-		public string TradeMark { get; set; }
-		[Required]
-		[StringLength(50)]
+		public string TradeMark { get; set; }	
 		public string Model { get; set; }
-		[Required]
 		public decimal UnitPrice { get; set; }
-		[Required]	
-		public string Memory { get; set; }
-		[Required]		
+		public string Memory { get; set; }		
 		public string OperatingSystem { get; set; }
-		[Required]
 		public string Ram { get; set; }
-		[Required]	
 		public string Camera { get; set; }
-		public virtual ICollection<Stock> Stocks { get; set; }
 		public virtual ICollection<Sale> Sales { get; set; }
+		public virtual ICollection<Stock> Stocks { get; set; }
 
 	}
 }

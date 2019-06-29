@@ -51,6 +51,36 @@ namespace StockControl.Service
 			personelRepository.Update(personel);
 			unitOfWork.SaveChanges();
 		}
+
+		public RegisterStatus Register(Personel personel)		{
+			
+			
+			if (string.IsNullOrEmpty(personel.IdentityNumber.ToString()))
+			{
+				return RegisterStatus.InvalidField;
+			}
+			else
+			{
+				var newuser = personelRepository.Get(x => x.IdentityNumber == personel.IdentityNumber);
+				if (newuser != null)
+				{
+					return RegisterStatus.UserAlreadyExists;
+				}
+
+
+			}
+
+			personelRepository.Insert(personel);
+			unitOfWork.SaveChanges();
+			return RegisterStatus.Success;
+		}
+
+		public Personel Login(string identityNumber, string password)
+		{
+			
+			var user = personelRepository.Get(x => x.IdentityNumber == identityNumber && x.Password == password);
+			return user;
+		}
 	}
 
 	public interface IPersonelService
@@ -60,6 +90,14 @@ namespace StockControl.Service
 		void Delete(int id);
 		IEnumerable<Personel> GetAll();
 		Personel Get(int id);
-		
+		RegisterStatus Register(Personel personel);
+		Personel Login(string userName, string password);
+	}
+
+	public enum RegisterStatus
+	{
+		Success = 1,
+		InvalidField = 2,
+		UserAlreadyExists = 3
 	}
 }

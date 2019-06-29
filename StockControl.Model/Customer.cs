@@ -10,13 +10,8 @@ namespace StockControl.Model
 {
 	public class Customer : BaseEntity
 	{
-		[Required]
-		[StringLength(50)]
 		public string FirstName { get; set; }
-		[Required]
-		[StringLength(50)]
 		public string LastName { get; set; }
-		[Required]
 		public Gender Gender { get; set; }
 		public string Phone { get; set; }
 		public string Email { get; set; }
