@@ -56,9 +56,13 @@
     <Compile Include="Builders\SaleBuilder.cs" />
     <Compile Include="Builders\ShipmentBuilder.cs" />
     <Compile Include="Builders\StockBuilder.cs" />
-    <Compile Include="Migrations\201906290643037_InitialCreate.cs" />
-    <Compile Include="Migrations\201906290643037_InitialCreate.Designer.cs">
-      <DependentUpon>201906290643037_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201906290710078_InitialCreate.cs" />
+    <Compile Include="Migrations\201906290710078_InitialCreate.Designer.cs">
+      <DependentUpon>201906290710078_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906290908507_Updatev1.0.cs" />
+    <Compile Include="Migrations\201906290908507_Updatev1.0.Designer.cs">
+      <DependentUpon>201906290908507_Updatev1.0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +80,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906290643037_InitialCreate.resx">
-      <DependentUpon>201906290643037_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201906290710078_InitialCreate.resx">
+      <DependentUpon>201906290710078_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906290908507_Updatev1.0.resx">
+      <DependentUpon>201906290908507_Updatev1.0.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

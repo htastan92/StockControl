@@ -51,14 +51,14 @@ namespace StockControl.Service
 			unitOfWork.SaveChanges();
 		}
 	}
-
 	public interface ICategoryService
 	{
 		void Insert(Category activity);
 		void Update(Category activity);
 		void Delete(int id);
 		IEnumerable<Category> GetAll();
-		Category Get(int id);	
-		
+		Category Get(int id);
+
 	}
+
 }

@@ -24,12 +24,25 @@ namespace StockControl.UI
 			builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
 			builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
 
-			builder.RegisterType<CategoryBuilder>().As<ICategoryService>();
-			builder.RegisterType<CustomerBuilder>().As<ICustomerService>();
-			builder.RegisterType<PersonelBuilder>().As<IPersonelService>();
-			builder.RegisterType<SaleBuilder>().As<ISaleService>();
-			builder.RegisterType<ShipmentBuilder>().As<IShipmentService>();
-			builder.RegisterType<StockBuilder>().As<IStockService>();
+			builder.RegisterType<CategoryService>().As<ICategoryService>();
+			builder.RegisterType<CustomerService>().As<ICustomerService>();
+			builder.RegisterType<PersonelService>().As<IPersonelService>();
+			builder.RegisterType<SaleService>().As<ISaleService>();
+			builder.RegisterType<ShipmentService>().As<IShipmentService>();
+			builder.RegisterType<StockService>().As<IStockService>();
+
+			builder.RegisterType<FrmMain>().As<FrmMain>();
+			builder.RegisterType<FrmRegister>().As<FrmRegister>();
+			builder.RegisterType<FrmLogin>().As<FrmLogin>();
+			var container = builder.Build();
+
+			using (var scope = container.BeginLifetimeScope())
+			{
+				Application.EnableVisualStyles();
+				Application.SetCompatibleTextRenderingDefault(false);
+				var frm = scope.Resolve<FrmMain>();
+				Application.Run(frm);
+			}
 		}
 	}
 }
