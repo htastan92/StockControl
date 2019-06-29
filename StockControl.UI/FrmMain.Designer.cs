@@ -1,6 +1,6 @@
 ﻿namespace StockControl.UI
 {
-	partial class FrmMain
+	partial class Form1
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,22 +28,13 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.SuspendLayout();
-			// 
-			// FrmMain
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.components = new System.ComponentModel.Container();
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.IsMdiContainer = true;
-			this.Name = "FrmMain";
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-			this.Text = "FrmMain";
-			this.Load += new System.EventHandler(this.FrmMain_Load);
-			this.ResumeLayout(false);
-
+			this.Text = "Form1";
 		}
 
 		#endregion
 	}
 }
+

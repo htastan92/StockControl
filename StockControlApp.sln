@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockControl.Data", "StockC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockControl.Service", "StockControl.Service\StockControl.Service.csproj", "{0D13949A-C9CB-44FD-ACDA-08FD9A9DF2B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockControl.UI", "StockControl.UI\StockControl.UI.csproj", "{DEB65CD6-D65A-4A0A-927A-20B2719F4E0D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockControl.UI", "StockControl.UI\StockControl.UI.csproj", "{EB9D8EE2-A196-4B7A-A802-83ED39BCB900}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,10 @@ Global
 		{0D13949A-C9CB-44FD-ACDA-08FD9A9DF2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D13949A-C9CB-44FD-ACDA-08FD9A9DF2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D13949A-C9CB-44FD-ACDA-08FD9A9DF2B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DEB65CD6-D65A-4A0A-927A-20B2719F4E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEB65CD6-D65A-4A0A-927A-20B2719F4E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEB65CD6-D65A-4A0A-927A-20B2719F4E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEB65CD6-D65A-4A0A-927A-20B2719F4E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9D8EE2-A196-4B7A-A802-83ED39BCB900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9D8EE2-A196-4B7A-A802-83ED39BCB900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9D8EE2-A196-4B7A-A802-83ED39BCB900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9D8EE2-A196-4B7A-A802-83ED39BCB900}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
