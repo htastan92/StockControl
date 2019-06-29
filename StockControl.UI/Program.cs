@@ -14,9 +14,24 @@ namespace StockControl.UI
 		[STAThread]
 		static void Main()
 		{
+<<<<<<< HEAD
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1());
+=======
+			var builder = new ContainerBuilder();
+			builder.RegisterType<ApplicationDbContext>().As<ApplicationDbContext>().SingleInstance();
+
+			builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
+			builder.RegisterType<UnitOfWork>().As<IUnitOfWork>();
+
+			builder.RegisterType<CategoryBuilder>().As<ICategoryService>();
+			builder.RegisterType<CustomerBuilder>().As<ICustomerService>();
+			builder.RegisterType<PersonelBuilder>().As<IPersonelService>();
+			builder.RegisterType<SaleBuilder>().As<ISaleService>();
+			builder.RegisterType<ShipmentBuilder>().As<IShipmentService>();
+			builder.RegisterType<StockBuilder>().As<IStockService>();
+>>>>>>> parent of e3d2f13... New Update
 		}
 	}
 }

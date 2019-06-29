@@ -28,10 +28,25 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+<<<<<<< HEAD:StockControl.UI/FrmMain.Designer.cs
 			this.components = new System.ComponentModel.Container();
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
 			this.Text = "Form1";
+=======
+			this.SuspendLayout();
+			// 
+			// Form1
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Name = "Form1";
+			this.Text = "Form1";
+			this.Load += new System.EventHandler(this.Form1_Load);
+			this.ResumeLayout(false);
+
+>>>>>>> parent of e3d2f13... New Update:StockControl.UI/Form1.Designer.cs
 		}
 
 		#endregion

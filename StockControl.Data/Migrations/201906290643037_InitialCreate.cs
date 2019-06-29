@@ -80,8 +80,6 @@ namespace StockControl.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        IdentityNumber = c.Int(nullable: false),
-                        Password = c.String(nullable: false),
                         FirstName = c.String(),
                         LastName = c.String(),
                         Gender = c.Int(nullable: false),
