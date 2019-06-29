@@ -10,9 +10,9 @@ namespace StockControl.Model
 {
 	public class Stock:BaseEntity
 	{
-		//public int ProductId { get; set; }		
+		public int ProductId { get; set; }		
 		public virtual Product Product { get; set; }
-		//public int PersonelId { get; set; }
+		public int PersonelId { get; set; }
 		public virtual Personel	Personel { get; set; }
 		public DateTime StockEntryDate { get; set; }
 		public int Quantity { get; set; }

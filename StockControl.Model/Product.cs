@@ -20,6 +20,8 @@ namespace StockControl.Model
 		public string OperatingSystem { get; set; }
 		public string Ram { get; set; }
 		public string Camera { get; set; }
-			   		 	  	  	 
+		public virtual ICollection<Sale> Sales { get; set; }
+		public virtual ICollection<Stock> Stocks { get; set; }
+
 	}
 }

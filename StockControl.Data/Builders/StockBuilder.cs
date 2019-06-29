@@ -13,8 +13,8 @@ namespace StockControl.Data.Builders
 		public StockBuilder(EntityTypeConfiguration<Stock> builder)
 		{
 			builder.HasKey(s => s.Id);
-			builder.HasRequired(s => s.Personel);
-			builder.HasRequired(a => a.Product);
+			builder.HasRequired(s => s.Personel).WithMany(a => a.Stocks).HasForeignKey(s => s.PersonelId);
+			builder.HasRequired(a => a.Product).WithMany(a => a.Stocks).HasForeignKey(s => s.ProductId);
 			builder.Property(a => a.StockEntryDate).IsRequired();
 			builder.Property(a => a.Quantity).IsRequired();
 

@@ -14,6 +14,6 @@ namespace StockControl.Model
 		public string Adress { get; set; }		
 		public string Phone { get; set; }
 		public decimal Price { get; set; }
-		
+		public virtual ICollection<Sale> Sales { get; set; }
 	}
 }

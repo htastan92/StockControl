@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +23,11 @@ namespace StockControl.Data
 		public virtual DbSet<Sale> Sales { get; set; }
 		public virtual DbSet<Shipment> Shipments { get; set; }
 		public virtual DbSet<Stock> Stocks { get; set; }
+
+		protected override void OnModelCreating(DbModelBuilder modelBuilder)
+		{
+			base.OnModelCreating(modelBuilder);
+			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+		}
 	}
 }

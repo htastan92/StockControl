@@ -17,7 +17,8 @@ namespace StockControl.Model
 		public DateTime BirthDate { get; set; }	
 		public string Phone { get; set; }	
 		public string Email { get; set; }
-		public ICollection<Sale> Sales { get; set; }
+		public virtual ICollection<Sale> Sales { get; set; }
+		public virtual ICollection<Stock> Stocks { get; set; }
 
 	}
 }
