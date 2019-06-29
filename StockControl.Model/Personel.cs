@@ -11,8 +11,11 @@ namespace StockControl.Model
 	public class Personel:BaseEntity
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
 		[Required]
 		[StringLength(50)]
+=======
+>>>>>>> parent of e3d2f13... New Update
 =======
 >>>>>>> parent of e3d2f13... New Update
 		public string FirstName { get; set; }
@@ -28,7 +31,11 @@ namespace StockControl.Model
 		public string Email { get; set; }
 		public virtual ICollection<Sale> Sales { get; set; }
 <<<<<<< HEAD
+<<<<<<< HEAD
 		
+=======
+		public virtual ICollection<Stock> Stocks { get; set; }
+>>>>>>> parent of e3d2f13... New Update
 =======
 		public virtual ICollection<Stock> Stocks { get; set; }
 >>>>>>> parent of e3d2f13... New Update
