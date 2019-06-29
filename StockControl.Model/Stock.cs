@@ -10,13 +10,17 @@ namespace StockControl.Model
 {
 	public class Stock:BaseEntity
 	{
-		public int ProductId { get; set; }		
+		public int ProductId { get; set; }	
+		[ForeignKey("ProductId")]
 		public virtual Product Product { get; set; }
-		public int PersonelId { get; set; }
+		//public int PersonelId { get; set; }
+		//[ForeignKey("PersonelId")]
 		public virtual Personel	Personel { get; set; }
 		public DateTime StockEntryDate { get; set; }
+		[Required]
 		public int Quantity { get; set; }
-		public  ICollection<Sale> Sales { get; set; }
+		public virtual ICollection<Sale> Sales { get; set; }
+		
 	}
 }
 

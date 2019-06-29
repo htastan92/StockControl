@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DEB65CD6-D65A-4A0A-927A-20B2719F4E0D}</ProjectGuid>
+    <ProjectGuid>{EB9D8EE2-A196-4B7A-A802-83ED39BCB900}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>StockControl.UI</RootNamespace>
     <AssemblyName>StockControl.UI</AssemblyName>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,9 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -69,7 +63,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -82,20 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StockControl.Data\StockControl.Data.csproj">
-      <Project>{06d27c4e-8606-4829-8556-ec8ac462b3de}</Project>
-      <Name>StockControl.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StockControl.Model\StockControl.Model.csproj">
-      <Project>{7588706d-cbbd-4c54-b267-181ce6447e4b}</Project>
-      <Name>StockControl.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\StockControl.Service\StockControl.Service.csproj">
-      <Project>{0d13949a-c9cb-44fd-acda-08fd9a9df2b2}</Project>
-      <Name>StockControl.Service</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
