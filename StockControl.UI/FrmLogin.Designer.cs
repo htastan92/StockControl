@@ -72,14 +72,14 @@
 			this.txtIdentity.Location = new System.Drawing.Point(157, 57);
 			this.txtIdentity.Name = "txtIdentity";
 			this.txtIdentity.Size = new System.Drawing.Size(142, 20);
-			this.txtIdentity.TabIndex = 3;
+			this.txtIdentity.TabIndex = 0;
 			// 
 			// txtPassword
 			// 
 			this.txtPassword.Location = new System.Drawing.Point(157, 100);
 			this.txtPassword.Name = "txtPassword";
 			this.txtPassword.Size = new System.Drawing.Size(142, 20);
-			this.txtPassword.TabIndex = 4;
+			this.txtPassword.TabIndex = 1;
 			// 
 			// linkLabel1
 			// 
@@ -87,7 +87,7 @@
 			this.linkLabel1.Location = new System.Drawing.Point(204, 189);
 			this.linkLabel1.Name = "linkLabel1";
 			this.linkLabel1.Size = new System.Drawing.Size(95, 13);
-			this.linkLabel1.TabIndex = 5;
+			this.linkLabel1.TabIndex = 3;
 			this.linkLabel1.TabStop = true;
 			this.linkLabel1.Text = "Forgot My Passord";
 			// 
@@ -116,6 +116,7 @@
 			this.Name = "FrmLogin";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "FrmLogin";
+			this.Load += new System.EventHandler(this.FrmLogin_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

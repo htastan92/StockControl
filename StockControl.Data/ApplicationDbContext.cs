@@ -1,4 +1,5 @@
-﻿using StockControl.Model;
+﻿using StockControl.Data.Builders;
+using StockControl.Model;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -27,7 +28,16 @@ namespace StockControl.Data
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			base.OnModelCreating(modelBuilder);
+
+			var categoryBuilder = new CategoryBuilder(modelBuilder.Entity<Category>());
+			var customerBuilder = new CustomerBuilder(modelBuilder.Entity<Customer>());
+			var personelBuilder = new PersonelBuilder(modelBuilder.Entity<Personel>());
+			var productBuilder = new ProductBuilder(modelBuilder.Entity<Product>());
+			var saleBuilder = new SaleBuilder(modelBuilder.Entity<Sale>());
+			var shipmentBuilder = new ShipmentBuilder(modelBuilder.Entity<Shipment>());
+			var stockBuilder = new StockBuilder(modelBuilder.Entity<Stock>());
 			modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
 		}
 	}
 }

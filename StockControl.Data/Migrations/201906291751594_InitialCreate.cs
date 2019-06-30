@@ -12,7 +12,7 @@ namespace StockControl.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
+                        Name = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -22,13 +22,13 @@ namespace StockControl.Data.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         CategoryId = c.Int(nullable: false),
-                        TradeMark = c.String(),
-                        Model = c.String(),
+                        TradeMark = c.String(nullable: false, maxLength: 50),
+                        Model = c.String(nullable: false, maxLength: 50),
                         UnitPrice = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        Memory = c.String(),
-                        OperatingSystem = c.String(),
+                        Memory = c.String(nullable: false, maxLength: 50),
+                        OperatingSystem = c.String(nullable: false, maxLength: 50),
                         Ram = c.String(),
-                        Camera = c.String(),
+                        Camera = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Categories", t => t.CategoryId)
@@ -50,9 +50,9 @@ namespace StockControl.Data.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Customers", t => t.CustomerId)
                 .ForeignKey("dbo.Personels", t => t.PersonelId)
-                .ForeignKey("dbo.Stocks", t => t.StockId)
                 .ForeignKey("dbo.Products", t => t.ProductId)
                 .ForeignKey("dbo.Shipments", t => t.ShipmentId)
+                .ForeignKey("dbo.Stocks", t => t.StockId)
                 .Index(t => t.PersonelId)
                 .Index(t => t.ProductId)
                 .Index(t => t.StockId)
@@ -64,14 +64,14 @@ namespace StockControl.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 50),
                         Gender = c.Int(nullable: false),
-                        Phone = c.String(),
-                        Email = c.String(),
-                        Adress = c.String(),
-                        City = c.String(),
-                        Region = c.String(),
+                        Phone = c.String(maxLength: 11),
+                        Email = c.String(maxLength: 50),
+                        Adress = c.String(maxLength: 100),
+                        City = c.String(maxLength: 50),
+                        Region = c.String(maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -80,15 +80,15 @@ namespace StockControl.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        IdentityNumber = c.Int(nullable: false),
+                        IdentityNumber = c.String(nullable: false),
                         Password = c.String(nullable: false),
-                        FirstName = c.String(),
-                        LastName = c.String(),
+                        FirstName = c.String(nullable: false, maxLength: 50),
+                        LastName = c.String(nullable: false, maxLength: 50),
                         Gender = c.Int(nullable: false),
                         AuthorityLevel = c.Int(nullable: false),
                         BirthDate = c.DateTime(nullable: false),
-                        Phone = c.String(),
-                        Email = c.String(),
+                        Phone = c.String(maxLength: 11),
+                        Email = c.String(maxLength: 50),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -113,9 +113,9 @@ namespace StockControl.Data.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Adress = c.String(),
-                        Phone = c.String(),
+                        Name = c.String(nullable: false, maxLength: 50),
+                        Adress = c.String(nullable: false, maxLength: 100),
+                        Phone = c.String(nullable: false, maxLength: 11),
                         Price = c.Decimal(nullable: false, precision: 18, scale: 2),
                     })
                 .PrimaryKey(t => t.Id);
@@ -124,9 +124,9 @@ namespace StockControl.Data.Migrations
         
         public override void Down()
         {
+            DropForeignKey("dbo.Sales", "StockId", "dbo.Stocks");
             DropForeignKey("dbo.Sales", "ShipmentId", "dbo.Shipments");
             DropForeignKey("dbo.Sales", "ProductId", "dbo.Products");
-            DropForeignKey("dbo.Sales", "StockId", "dbo.Stocks");
             DropForeignKey("dbo.Stocks", "ProductId", "dbo.Products");
             DropForeignKey("dbo.Stocks", "PersonelId", "dbo.Personels");
             DropForeignKey("dbo.Sales", "PersonelId", "dbo.Personels");

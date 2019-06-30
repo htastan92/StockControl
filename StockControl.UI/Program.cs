@@ -34,6 +34,7 @@ namespace StockControl.UI
 			builder.RegisterType<FrmMain>().As<FrmMain>();
 			builder.RegisterType<FrmRegister>().As<FrmRegister>();
 			builder.RegisterType<FrmLogin>().As<FrmLogin>();
+			builder.RegisterType<FrmSale>().As<FrmSale>();
 			var container = builder.Build();
 
 			using (var scope = container.BeginLifetimeScope())

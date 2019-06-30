@@ -15,14 +15,19 @@ namespace StockControl.UI
 	{
 		private readonly FrmLogin _frmLogin;
 		private readonly FrmRegister _frmRegister;
+		private readonly FrmSale _frmSale;
 		private readonly IPersonelService _personelService;
 
-		public FrmMain(FrmRegister frmRegister,FrmLogin frmLogin, IPersonelService personelService )
+		public FrmMain(FrmRegister frmRegister,FrmLogin frmLogin, IPersonelService personelService,FrmSale frmSale )
 		{			
 			this._personelService = personelService;
 			InitializeComponent();
 			this._frmRegister = frmRegister;
+			frmRegister.MdiParent = this;
 			this._frmLogin = frmLogin;
+			this._frmLogin.MasterForm = this;
+			frmLogin.MdiParent = this;
+			this._frmSale = frmSale;
 
 		}
 
@@ -41,6 +46,21 @@ namespace StockControl.UI
 				this.WindowState = FormWindowState.Minimized;
 				this.ShowInTaskbar = false;
 			}
+		}
+
+		private void BtnLogout_Click(object sender, EventArgs e)
+		{
+			this._frmLogin.Show();
+			this.Hide();
+			this._frmLogin.ClearLoginForm();
+		}
+
+		private void BtnSale_Click(object sender, EventArgs e)
+		{
+			_frmSale.Show();
+			this.WindowState = FormWindowState.Minimized;
+			this.ShowInTaskbar = false;
+			
 		}
 	}
 }
