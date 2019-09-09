@@ -23,10 +23,10 @@ namespace StockControl.UI
 			this._personelService = personelService;
 			InitializeComponent();
 			this._frmRegister = frmRegister;
-			frmRegister.MdiParent = this;
+			
 			this._frmLogin = frmLogin;
 			this._frmLogin.MasterForm = this;
-			frmLogin.MdiParent = this;
+			
 			this._frmSale = frmSale;
 
 		}
@@ -37,29 +37,27 @@ namespace StockControl.UI
 			if (personelcount == 0)
 			{
 				_frmRegister.Show();
-				this.WindowState = FormWindowState.Minimized;
-				this.ShowInTaskbar = false;
+				this.Hide();
+				
 			}
 			else
 			{
 				_frmLogin.Show();
-				this.WindowState = FormWindowState.Minimized;
-				this.ShowInTaskbar = false;
+				this.Hide();
 			}
+
 		}
 
 		private void BtnLogout_Click(object sender, EventArgs e)
 		{
-			this._frmLogin.Show();
-			this.Hide();
+			this._frmLogin.Show();			
 			this._frmLogin.ClearLoginForm();
 		}
 
 		private void BtnSale_Click(object sender, EventArgs e)
 		{
-			_frmSale.Show();
-			this.WindowState = FormWindowState.Minimized;
-			this.ShowInTaskbar = false;
+			_frmSale.Show();			
+			
 			
 		}
 	}

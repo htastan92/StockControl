@@ -56,9 +56,9 @@
     <Compile Include="Builders\SaleBuilder.cs" />
     <Compile Include="Builders\ShipmentBuilder.cs" />
     <Compile Include="Builders\StockBuilder.cs" />
-    <Compile Include="Migrations\201906291751594_InitialCreate.cs" />
-    <Compile Include="Migrations\201906291751594_InitialCreate.Designer.cs">
-      <DependentUpon>201906291751594_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201907051113118_InitialCreate.cs" />
+    <Compile Include="Migrations\201907051113118_InitialCreate.Designer.cs">
+      <DependentUpon>201907051113118_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,8 +76,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201906291751594_InitialCreate.resx">
-      <DependentUpon>201906291751594_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201907051113118_InitialCreate.resx">
+      <DependentUpon>201907051113118_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
